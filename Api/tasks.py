@@ -13,13 +13,13 @@ from YoutubeFetch import settings
 Periodic task to fetch data from Youtube Api and store in the DB
 """
 
-# runs after every 5 minutes
+# runs after every 2 minutes
 @periodic_task(run_every=crontab(minute='*/2'))
 def fetch_youtube_data():
     code = 'api.call_youtube_api'    # a unique code
     apikeys = settings.GOOGLE_API_KEYS
     time_now = datetime.now()
-    last_request_time = time_now - timedelta(minutes=5)
+    last_request_time = time_now - timedelta(minutes=2)
 
     # A variable to check if a valid api key exists or not
     valid = False

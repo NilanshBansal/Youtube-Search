@@ -23,4 +23,7 @@ Used Celery [Docs](https://docs.celeryproject.org/en/stable/django/first-steps-w
 - Start celery worker using `celery -A YoutubeFetch worker -l info`
 - Start celery beat using `celery -A YoutubeFetch beat -l info`
 
-
+## Building the Project with Docker
+- Navigate to the project directory in terminal
+- Run `docker-compose up`
+- Access the project at http://localhost:8000
